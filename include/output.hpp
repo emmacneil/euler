@@ -1,5 +1,14 @@
+/* output.hpp
+ *
+ * Utility functions for nicely outputting frequently-used objects.
+ */
+
+
+
 #include <iostream>
 #include <vector>
+
+
 
 // Overload the << operator for vectors. Example:
 //   vector<string> v = {"hello", "world"}
