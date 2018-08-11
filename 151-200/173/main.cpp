@@ -27,14 +27,17 @@ using namespace std;
 
 
 // Counts the number of integers k in the closed interval [l, r] such that k and r have the same
-// parity. It is assumed that l < r.
+// parity.
 long inrange(long l, long r)
 {
+  // If l > r, swap l and r.
+  if (l > r) return inrange(r, l);
+
   // If l and r have different parity, we can increase l
   if ( (r % 2) != (l % 2) ) return inrange(l + 1, r);
 
   // Shift the range so that it begins at 0.
-  if (l > 0) return inrange(0, r - l);
+  if (l != 0) return inrange(0, r - l);
 
   // If we made it this far, our interval is of the form [0, r] for even r.
   // The number of even integers in this range is simpy r/2 + 1.
