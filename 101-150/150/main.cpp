@@ -14,7 +14,8 @@
  * and once when searching for the least value. Many improvements may be made. We don't need to
  * initialize all 167 million elements -- only the 500 thousand non-zero elements. We can also keep
  * track of the least sum as we are computing the sums. This would cut down on millions of memory
- * accesses and save several seconds. Regardless, this implementation runs in about 9 seconds.
+ * accesses and save several seconds. Regardless, this implementation runs in about 9 seconds, and
+ * runs in less than 1 second when compiled with optimization level -O3.
  */
 
 
