@@ -1,1 +1,11 @@
-*.out
+*
+!*/
+!*.asm
+!*.c
+!*.cpp
+!*.h
+!*.hpp
+!*.hs
+!*.java
+!.gitignore
+!makefile
