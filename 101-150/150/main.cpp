@@ -11,16 +11,8 @@
 using namespace std;
 
 const int NROWS = 1000;
-//const int NROWS = 6;
 
 int T[NROWS][NROWS];
-/*int T[NROWS][NROWS] = {
-  { 15,   0,   0,   0,   0,   0},
-  {-14,  -7,   0,   0,   0,   0},
-  { 20, -13,  -5,   0,   0,   0},
-  { -3,   8,  23, -26,   0,   0},
-  {  1,  -4,  -5, -18,   5,   0},
-  {-16,  31,   2,   9,  28,   3}};*/
 
 // Returns the minimum sub-triangle whose top corner is T[r][c].
 int minimize(int r, int c)
@@ -53,7 +45,6 @@ int main(int argc, char * argv[])
   int m = 0;
   int ans = 0;
   for (int r = 0; r < NROWS; r++) {
-    //cout << "Row: " << r << endl;
     for (int c = 0; c <= r; c++) {
       m = minimize(r, c);
       ans = m < ans ? m : ans;
